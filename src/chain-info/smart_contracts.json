@@ -1,0 +1,232 @@
+{
+	"deploymentAddress": {
+		"sepolia": "0xbb5405BCBf960f86a6f3f9C19f73B0dD8862a8f2",
+		"scroll_sepolia": "0xbb5405BCBf960f86a6f3f9C19f73B0dD8862a8f2"
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "string",
+					"name": "key",
+					"type": "string"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "constructor"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "Found",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "TreasureChest",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "depositor",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "treasureID",
+					"type": "uint256"
+				},
+				{
+					"internalType": "int256",
+					"name": "latitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "int256",
+					"name": "longitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "bool",
+					"name": "isTreasureFound",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "num",
+					"type": "uint256"
+				}
+			],
+			"name": "existsInFound",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getBalance",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getFoundArray",
+			"outputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "",
+					"type": "uint256[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int256",
+					"name": "latitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "int256",
+					"name": "longitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "ID",
+					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "webkey",
+					"type": "string"
+				}
+			],
+			"name": "getTreasure",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "getTreasureArray",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "depositor",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "amount",
+							"type": "uint256"
+						},
+						{
+							"internalType": "uint256",
+							"name": "treasureID",
+							"type": "uint256"
+						},
+						{
+							"internalType": "int256",
+							"name": "latitude",
+							"type": "int256"
+						},
+						{
+							"internalType": "int256",
+							"name": "longitude",
+							"type": "int256"
+						},
+						{
+							"internalType": "bool",
+							"name": "isTreasureFound",
+							"type": "bool"
+						}
+					],
+					"internalType": "struct Treasure[]",
+					"name": "",
+					"type": "tuple[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int256",
+					"name": "latitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "int256",
+					"name": "longitude",
+					"type": "int256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "string",
+					"name": "webkey",
+					"type": "string"
+				}
+			],
+			"name": "recordTreasureDeposit",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"stateMutability": "payable",
+			"type": "receive"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  background:url(bg.jpg);
+  background-size:cover;
+  min-height: 100vh;
+  
+}
+
+Button{
+  margin:10px !important;
+  background-color: #432b01 !important;
+}
+
+.locationBox{
+  text-align: center;
+  margin:auto;
+  max-width: 40vh;
+  background-color: white;
+  margin-top:20px;
+}
+
+.App-header {
+  background-color: #432b01;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #ffffff;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.Current-loc{
+  transform:scale(1.5);
+  color:white;
+  filter:drop-shadow(0 0 0.75rem black);
+  font-weight:600;
+  padding:20px 0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
