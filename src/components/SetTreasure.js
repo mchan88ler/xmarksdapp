@@ -46,9 +46,9 @@ const SetTreasure = ({latitude,
         lat: latitude,
         lng: longitude
       };
-
-
- const _onClick=(obj)=> { 
+    
+    
+    const _onClick=(obj)=> { 
     console.log(obj.latLng.lat(),obj.latLng.lng())
     setSelectLatitude(Math.round(obj.latLng.lat()*1000)/1000)
     setSelectLongitude(Math.round(obj.latLng.lng()*1000)/1000)
@@ -248,8 +248,8 @@ const recordTreasureDeposit = async ()=>{
    <Typography sx={{color:'yellow'}}>
     <Typography sx={{color:'red'}}>Note:</Typography>Two Transaction Signings Necessary Upon Deposit</Typography>
    <hr></hr>
-   <Typography>1.Depositing Treasure Amount</Typography>
-   <Typography>2.Record Treasure Location Map</Typography>
+   <Typography>1. Specify the amount you wish to deposit. </Typography>
+   <Typography>2. Click on the map where you wish to bury.</Typography>
    </Card>
 
    </Box>:

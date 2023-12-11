@@ -19,6 +19,9 @@ Button{
   background-color: white;
   margin-top:20px;
 }
+.css-0{
+  background-color:wheat;
+}
 
 .App-header {
   background-color: #432b01;

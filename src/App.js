@@ -34,14 +34,10 @@ function App() {
 
 
   useEffect(()=>{
-    if(navigator.geolocation){
-      setNavigatorAvailable(true)
-      navigator.geolocation.watchPosition(function(position){
-          setLatitude(Math.round(position.coords.latitude*1000)/1000)
-          setLongitude(Math.round(position.coords.longitude*1000)/1000)
-      })
-  }
-  },[])
+    setLatitude(32.299507); // Set latitude to London's latitude (32.299507)
+    setLongitude(-64.790337); // Set longitude to London's longitude (-0.1278)
+    setNavigatorAvailable(true);
+  }, []);
 
   const getWalletBalance = async (provider) => {
     // Look up the balance
@@ -57,7 +53,7 @@ function App() {
   return (
     <Box className="App">
       <header className="App-header">
-       X Marks the Spot
+       X Marks The Spot
       </header>
       <Box>
       
@@ -68,9 +64,9 @@ function App() {
       latitude={latitude}
       longitude={longitude}
       navigatorAvailable={navigatorAvailable}/>:
-      <Box sx={{marginTop:'200px'}}>
-        <CircularProgress />
-        <Typography className="Current-loc">Getting current user coordinates</Typography>
+      <Box sx={{marginTop:'30px'}}>
+        <CircularProgress/>
+        <Typography>Loading ... Latitude and Longitude ...</Typography>
       </Box>
        }
     
@@ -87,11 +83,11 @@ function App() {
       </Box>
 
        {
-      defaultAccount && latitude && longitude?
+      defaultAccount?
       <Box sx={{display:'flex'}}>
        <Box sx={{flexDirection:'row',margin:'auto'}}>
-       <Button onClick={()=>{setTreasureMode("setTreasure")}} variant="contained" color="success">SET TREASURE</Button> 
-       <Button onClick={()=>{setTreasureMode("getTreasure")}} variant="contained" color="warning">GET TREASURE</Button>
+       <Button onClick={()=>{setTreasureMode("setTreasure")}} variant="contained" color="warning">SET TREASURE</Button> 
+       <Button onClick={()=>{setTreasureMode("getTreasure")}} variant="contained" color="success">GET TREASURE</Button>
        </Box>
       </Box>:null
       } 
