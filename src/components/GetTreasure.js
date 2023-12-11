@@ -319,7 +319,7 @@ const getWalletBalance = async (provider) => {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={10}
+            zoom={3}
             onLoad={onLoad}
             onUnmount={onUnmount}
           >
