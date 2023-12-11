@@ -23,7 +23,7 @@ import { CircularProgress,
 } from '@mui/material';
 
 const containerStyle = {
-  width: '400px',
+  width: '800px',
   height: '400px'
 };
 
@@ -319,7 +319,7 @@ const getWalletBalance = async (provider) => {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={7}
+            zoom={10}
             onLoad={onLoad}
             onUnmount={onUnmount}
           >

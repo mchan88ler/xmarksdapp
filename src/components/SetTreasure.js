@@ -14,8 +14,9 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
   
   const containerStyle = {
-    width: '400px',
-    height: '400px'
+    width: '600px',
+    height: '400px',
+    borderRadius:'10px',
   };
   
 
@@ -44,7 +45,7 @@ const SetTreasure = ({latitude,
 
       const center = {
         lat: latitude,
-        lng: longitude
+        lng: longitude,
       };
     
     
@@ -188,7 +189,7 @@ const recordTreasureDeposit = async ()=>{
     
        setTimeout(()=> setMap(map),100)
       }, [])
-    
+
       const onUnmount = React.useCallback(function callback(map) {
         setMap(null)
       }, [])
@@ -206,12 +207,12 @@ const recordTreasureDeposit = async ()=>{
           message=""
           action={action}
           sx={{
-            backgroundColor:"white"
+            backgroundColor:"wheat"
           }}
         >
           <a target="_blank" href={`https://sepolia.scrollscan.com/tx/${txHash}`}>
             <Typography color="black">
-              Success-Treasure Deposited! Click for Transaction:${txHash} on Scroll Scan
+              Success-Treasure Deposited! ${txHash}
             </Typography>
            
           </a>
@@ -220,7 +221,7 @@ const recordTreasureDeposit = async ()=>{
             onClick={_onClick}
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={7}
+            zoom={10}
             onLoad={onLoad}
             onUnmount={onUnmount}
           >
