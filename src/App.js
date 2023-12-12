@@ -34,8 +34,8 @@ function App() {
 
 
   useEffect(()=>{
-    setLatitude(32.299507); // Set latitude to London's latitude (32.299507)
-    setLongitude(-64.790337); // Set longitude to London's longitude (-0.1278)
+    setLatitude(32.299507); 
+    setLongitude(-64.790337); 
     setNavigatorAvailable(true);
   }, []);
 
